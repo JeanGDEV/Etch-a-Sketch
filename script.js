@@ -18,6 +18,9 @@ function initializeGrid() {
             square.style.height = `${size}px`
             square.style.backgroundColor = "#222"
             square.style.border = "1px solid black"
+            square.addEventListener("mouseover", (event) => {
+                event.target.style.backgroundColor = "tomato"
+            })
         }
     }  
 }
