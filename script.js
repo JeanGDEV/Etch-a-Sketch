@@ -5,7 +5,6 @@ const resetBtn = document.querySelector(".reset-btn")
 const containerWidth = 960
 
 let newGridPrompt = 16
-const size = containerWidth / parseInt(newGridPrompt)
 
 initializeGrid()
 
@@ -14,6 +13,7 @@ resetBtn.addEventListener("click", () => newGrid())
 function initializeGrid() {
     for (let i = 0; i < newGridPrompt; i++) {
         for (let j = 0; j < newGridPrompt; j++) {
+            const size = containerWidth / parseInt(newGridPrompt)
             const square = document.createElement("div")
             container.appendChild(square)
             square.style.width = `${size}px`
