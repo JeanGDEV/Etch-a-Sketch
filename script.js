@@ -4,7 +4,8 @@ const resetBtn = document.querySelector(".reset-btn")
 
 const containerWidth = 960
 
-let newGridPrompt = 16
+const newGridPrompt = 16
+const size = containerWidth / parseInt(newGridPrompt)
 
 initializeGrid()
 
@@ -13,7 +14,6 @@ resetBtn.addEventListener("click", () => newGrid())
 function initializeGrid() {
     for (let i = 0; i < newGridPrompt; i++) {
         for (let j = 0; j < newGridPrompt; j++) {
-            const size = containerWidth / parseInt(newGridPrompt)
             const square = document.createElement("div")
             container.appendChild(square)
             square.style.width = `${size}px`
@@ -31,11 +31,20 @@ function newGrid() {
     while(container.firstChild) {
         container.removeChild(container.firstChild)
     }
-    newGridPrompt = prompt("Enter a grid number")
-    if (!isNaN(newGridPrompt) && newGridPrompt > 1 && newGridPrompt < 100) {
-        initializeGrid()
-    }
-    
 }
 
+function isValid(input) {
+    if(input === null) return false
+    if (input.trim() === "") return false
+
+    const number = Number(input)
+
+    if (isNaN(number)) return false
+    if (!Number.isInteger(number)) return false
+    if (number < 1 || number > 100) return false
+
+    // if everything is good, return true
+
+    return true
+}
 
