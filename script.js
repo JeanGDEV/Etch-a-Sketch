@@ -11,6 +11,10 @@ initializeGrid()
 resetBtn.addEventListener("click", () => newGrid())
 
 function initializeGrid() {
+    let randomColor1 = Math.floor((Math.random() * 255)) + 1
+    let randomColor2 = Math.floor((Math.random() * 255)) + 1
+    let randomColor3 = Math.floor((Math.random() * 255)) + 1
+    let randomColorBg = `rgb(${randomColor1}, ${randomColor2}, ${randomColor3})`
     let size = containerWidth / newGridPrompt
     for (let i = 0; i < newGridPrompt; i++) {
         for (let j = 0; j < newGridPrompt; j++) {
@@ -21,7 +25,11 @@ function initializeGrid() {
             square.style.backgroundColor = "#222"
             square.style.border = "1px solid black"
             square.addEventListener("mouseover", (event) => {
-                event.target.style.backgroundColor = "tomato"
+                let randomColor1 = Math.floor((Math.random() * 255)) + 1
+                let randomColor2 = Math.floor((Math.random() * 255)) + 1
+                let randomColor3 = Math.floor((Math.random() * 255)) + 1
+                let randomColorBg = `rgb(${randomColor1}, ${randomColor2}, ${randomColor3})`
+                event.target.style.backgroundColor = randomColorBg
             })
         }
     }  
