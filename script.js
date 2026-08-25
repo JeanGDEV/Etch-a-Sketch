@@ -2,7 +2,7 @@ const container = document.querySelector(".container")
 const resetBtn = document.querySelector(".reset-btn")
 
 
-const containerWidth = 960
+const containerWidth = 400
 
 let newGridPrompt = 16
 
@@ -18,7 +18,7 @@ function initializeGrid() {
             container.appendChild(square)
             square.style.width = `${size}px`
             square.style.height = `${size}px`
-            square.style.backgroundColor = "#222"
+            square.style.backgroundColor = "white"
             square.style.border = "1px solid black"
             square.addEventListener("mouseover", (event) => {
                 let randomColor1 = Math.floor((Math.random() * 255)) + 1
