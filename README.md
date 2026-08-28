@@ -6,4 +6,5 @@
 ## :video_game: How to play
 1. Go to my [page](https://jeangdev.github.io/Etch-a-Sketch/)
 2. Draw throughout the grid
-3. Have fun :)
+3. If you want to change the grid size you can click "Reset grid"
+4. Have fun :)
